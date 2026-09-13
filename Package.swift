@@ -1,61 +1,37 @@
 // swift-tools-version: 5.8
 import PackageDescription
-
 let package = Package(
     name: "IFBApplianceSDK",
     platforms: [.iOS(.v15)],
     products: [
-        .library(name: "IFBApplianceSDK", targets: ["IFBApplianceSDK"]),
-        .library(name: "IFBProvisioningSDK", targets: ["IFBProvisioningSDK"]),
-        .library(name: "IFBSDKCore", targets: ["IFBSDKCore"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/espressif/esp-idf-provisioning-ios.git", from: "2.1.2"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.8.1"))
+        .library(
+            name: "IFBApplianceSDK",
+            targets: ["IFBApplianceSDK", "IFBProvisioningSDK", "IFBSDKCore"]
+        ),
+        .library(
+            name: "IFBProvisioningSDK",
+            targets: ["IFBProvisioningSDK", "IFBSDKCore"]
+        ),
+        .library(
+            name: "IFBSDKCore",
+            targets: ["IFBSDKCore"]
+        )
     ],
     targets: [
-        // Precompiled binaries with Swift modules embedded
         .binaryTarget(
-            name: "IFBSDKCoreBinary",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.2/IFBSDKCore.xcframework.zip",
-            checksum: "85c6aeb21f5bf18ee197849da9a83d1504536b2ea5f40e7625f6e19c3a596eb6"
-        ),
-        .binaryTarget(
-            name: "IFBProvisioningSDKBinary",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.2/IFBProvisioningSDK.xcframework.zip",
-            checksum: "1df84e9c23d3f081d457adb8e525deb70c5a2c0fc48e1b21822a3685d9162e0a"
-        ),
-        .binaryTarget(
-            name: "IFBApplianceSDKBinary",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.2/IFBApplianceSDK.xcframework.zip",
-            checksum: "3f7bff07cde9926154c88684659e6859f78026689e376584f1b178426d3b3e60"
-        ),
-
-        // Shim targets linking the dependency hierarchy
-        .target(
             name: "IFBSDKCore",
-            dependencies: [
-                "IFBSDKCoreBinary",
-                .product(name: "Alamofire", package: "Alamofire")
-            ],
-            path: "Shims/IFBSDKCore"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBSDKCore.xcframework.zip",
+            checksum: "d203232a57a9f0a3cac9b9c7511ad7b92bf785f9b76275e8b4945a8ce0d1f100"
         ),
-        .target(
+        .binaryTarget(
             name: "IFBProvisioningSDK",
-            dependencies: [
-                "IFBProvisioningSDKBinary",
-                "IFBSDKCore",
-                .product(name: "ESPProvision", package: "esp-idf-provisioning-ios")
-            ],
-            path: "Shims/IFBProvisioningSDK"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBProvisioningSDK.xcframework.zip",
+            checksum: "b989cb7d0453eec3349d0b4a50702d508388b7952c5b86b4f5e8d11953cc3e35"
         ),
-        .target(
+        .binaryTarget(
             name: "IFBApplianceSDK",
-            dependencies: [
-                "IFBApplianceSDKBinary",
-                "IFBProvisioningSDK"
-            ],
-            path: "Shims/IFBApplianceSDK"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBApplianceSDK.xcframework.zip",
+            checksum: "2666af3489869324b9539746564539b66282bdc821aaa60261f124af70e9b107"
         )
     ]
 )
