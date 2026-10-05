@@ -20,18 +20,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "IFBSDKCore",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBSDKCore.xcframework.zip",
-            checksum: "d203232a57a9f0a3cac9b9c7511ad7b92bf785f9b76275e8b4945a8ce0d1f100"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.4/IFBSDKCore.xcframework.zip",
+            checksum: "84de68f8647f17f31e8e84281c71bbdf45dc0569ff5e2047f958e9afa540cdf9"
         ),
         .binaryTarget(
             name: "IFBProvisioningSDK",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBProvisioningSDK.xcframework.zip",
-            checksum: "b989cb7d0453eec3349d0b4a50702d508388b7952c5b86b4f5e8d11953cc3e35"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.4/IFBProvisioningSDK.xcframework.zip",
+            checksum: "a4fc704748be33992a075e036c97ed8556fcd4d96f65e2bcee5841c9a45dae96"
         ),
         .binaryTarget(
             name: "IFBApplianceSDK",
-            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.3/IFBApplianceSDK.xcframework.zip",
-            checksum: "2666af3489869324b9539746564539b66282bdc821aaa60261f124af70e9b107"
+            url: "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.4/IFBApplianceSDK.xcframework.zip",
+            checksum: "a0bf298674655d5254325603ceb90adff94cb680184e3f469a84f9cdb8919035"
         )
     ]
 )

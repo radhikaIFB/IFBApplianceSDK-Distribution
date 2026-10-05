@@ -1,0 +1,33 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "ifbappliancesdk-distribution",
+          "kind" : "root",
+          "location" : "/Users/ifbiot/Documents/IFBApplianceSDK-Distribution",
+          "name" : "IFBApplianceSDK-Distribution"
+        },
+        "path" : "/Users/ifbiot/Documents/IFBApplianceSDK-Distribution/.build/artifacts/ifbappliancesdk-distribution/IFBApplianceSDK/IFBApplianceSDK.xcframework",
+        "source" : {
+          "checksum" : "29a8cd86b01b115be8d31c0ef26f7301242a916ea5f768c4bed062548588cf88",
+          "type" : "remote",
+          "url" : "https://github.com/radhikaIFB/IFBApplianceSDK-Distribution/releases/download/1.0.0/IFBApplianceSDK.xcframework.zip"
+        },
+        "targetName" : "IFBApplianceSDK"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}
